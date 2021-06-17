@@ -1,4 +1,5 @@
-<!DOCTYPE html> <!-- saved from url=(0040)https://www.fxstreet.com/info/contact-us -->
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://www.fxstreet.com/info/contact-us -->
 <html lang="en">
 
 <head>
@@ -80,179 +81,377 @@
     <meta name="keywords" content="contact us, forex, trading">
 </head>
 
-<body class="cbp-spmenu-push fxs_has_sponsor"> <a id="" class="fxs_skip"
-        href="https://www.fxstreet.com/info/contact-us#fxs_content">Skip to main content</a>
+<body class="cbp-spmenu-push fxs_has_sponsor">
 
-    <!--AQUÍ EMPIEZA EL FORMULARIO DE SALESFORCE-->
-
-
-    <div class="fxs_selector_item" id="fxs_selector_advertisement"><a target="_self"
-            href="/index.html?section=advertisement">advertisement selector</a>
+    <!--SALESFORCE-->
+    <script src="https://www.google.com/recaptcha/api.js">
+    </script>
+    <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") { var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value); elems["ts"] = JSON.stringify(new Date().getTime()); document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
+    <div class="fxs_contact_intro" id="fxs_contact_intro">
+        <h2 class="fxs_headline_from_medium_to_large ">Contact us and let us know<br />how we can help</h2>
+        <p class="fxs_txt_large fxs_marginBase_bottom_big">Select the option you what to contact for:</p>
     </div>
-    <div class="fxs_selector_item" id="fxs_selector_support"><a target="_self"
-            href="/index.html?section=support">support selector</a></div>
-    <div class="fxs_selector_item" id="fxs_selector_contributors"><a target="_self"
-            href="/index.html?section=contributors">contributors selector</a></div>
-    <div class="fxs_selector_item" id="fxs_selector_products"><a target="_self"
-            href="/index.html?section=products">products selector</a></div>
-    <div class="fxs_section_item fxs_hideElements" id="fxs_section_advertisement">
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-        <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") { var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value); elems["ts"] = JSON.stringify(new Date().getTime()); document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"> <input
-                type=hidden name='captcha_settings'
+    <style>
+        .fxs_section_item sup {
+            position: relative;
+            top: 4px;
+            left: 4px;
+            line-height: 5px;
+            ;
+        }
+    </style>
+    <div class="fxs_section_item fxs_hideElements" id="fxs_section_support">
+        <h3 class="fxs_headline_from_small_to_medium fxs_marginBase_bottom_big fxs_txt_corp_clr ">
+            <i class="fas fa-headset"></i>
+            Get in touch with our user support team
+        </h3>
+
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+            <input type=hidden name='captcha_settings'
                 value='{"keyname":"Invisible","fallback":"true","orgId":"00D09000006J5vH","ts":""}'>
-            <input type=hidden name="oid" value="00D09000006J5vH"> <input type=hidden name="retURL"
+            <input type=hidden name="orgid" value="00D09000006J5vH">
+            <input type=hidden name="retURL"
                 value="https://www.fxstreet.com/info/contact-us?section=support&status=sent">
-            <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
-                type="text" /><br> <label for="last_name">Last Name</label><input id="last_name" maxlength="80"
-                name="last_name" size="20" type="text" /><br> <label for="email">Email</label><input id="email"
-                maxlength="80" name="email" size="20" type="text" /><br> <label for="company">Company</label><input
-                id="company" maxlength="40" name="company" size="20" type="text" /><br>
-            <p> Interested in: </p> FXStreet:<input id="00N09000006t9iG" name="00N09000006t9iG" type="checkbox"
-                value="1" /><br>
-            Myfxbook:<input id="00N09000006t9iL" name="00N09000006t9iL" type="checkbox" value="1" /><br>
-            TradingView:<input id="00N09000006t9iQ" name="00N09000006t9iQ" type="checkbox" value="1" /><br>
-            ForexCrunch:<input id="00N09000006t9iV" name="00N09000006t9iV" type="checkbox" value="1" /><br> <input
-                type="hidden" type="hidden" for="recordType" class="w2linput hidden" id="recordType" name="recordType"
-                value="012090000001VxU"><br>
-            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a"></div><br>
+            <div class="fxs_row">
+                <div class="fxs_formGroup fxs_col fxs_col_50">
+                    <label for="name">
+                        Name<sup>*</sup></label>
+                    <input id="name" maxlength="80" name="name" size="20" type="text" class="fxs_textInput" />
+
+                </div>
+                <div class="fxs_formGroup fxs_col fxs_col_50">
+                    <label for="phone">Phone</label>
+                    <input id="phone" maxlength="40" name="phone" size="20" type="text" class="fxs_textInput" />
+                </div>
+            </div>
+            <div class="fxs_row">
+                <div class="fxs_formGroup fxs_col fxs_col_50">
+                    <label for="email">Email</label>
+                    <input id="email" maxlength="80" name="email" size="20" type="text" class="fxs_textInput" />
+                </div>
+                <div class="fxs_formGroup fxs_col fxs_col_50">
+                    <label for="00N090000096kdC">Select subject<sup>*</sup></label>
+                    <select id="00N090000096kdC" name="00N090000096kdC" title="Subject" class="fxs_select">
+                        <option value="">--None--</option>
+                        <option value="Subscribe to Premium">Subscribe to Premium</option>
+                        <option value="Accessing Premium Webinars">Accessing Premium Webinars</option>
+                        <option value="Cancel Premium Membership">Cancel Premium Membership </option>
+                        <option value="Unsubscribe">Unsubscribe</option>
+                        <option value="Payment Query">Payment Query</option>
+                        <option value="Log in Issue">Log in Issue</option>
+                        <option value="Sending Feedback">Sending Feedback</option>
+                        <option value="Signal Service Enquiry">Signal Service Enquiry </option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fxs_row">
+                <div class="fxs_formGroup fxs_col fxs_col_100">
+                    <label for="description">Description</label>
+                    <textarea name="description" class="fxs_textarea"></textarea>
+                </div>
+            </div>
+            <div class="fxs_formGroup fxs_col fxs_col_50">
+                <label for="recordType">Case Record Type</label>
+                <select id="recordType" name="recordType">
+                    <option value="">--None--</option>
+                    <option value="012090000005syc">Cases</option>
+                    <option value="012090000005ujr">Cases B2B</option>
+                    <option value="01209000000633E">Web-to-Case</option>
+                </select>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a">
+
+            </div>
+            <br>
             <input type="submit" name="submit">
         </form>
     </div>
-    <div class="fxs_section_item fxs_hideElements" id="fxs_section_support">
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-        <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") { var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value); elems["ts"] = JSON.stringify(new Date().getTime()); document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST"> <input
-                type=hidden name='captcha_settings'
+
+    <div class="fxs_section_item fxs_hideElements" id="fxs_section_products">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name='captcha_settings'
                 value='{"keyname":"Invisible","fallback":"true","orgId":"00D09000006J5vH","ts":""}'>
-            <input type=hidden name="orgid" value="00D09000006J5vH"> <input type=hidden name="retURL"
-                value="https://www.fxstreet.com/info/contact-us?section=support&status=sent">
-            <label for="name">Contact Name</label><input id="name" maxlength="80" name="name" size="20"
-                type="text" /><br> <label for="email">Email</label><input id="email" maxlength="80" name="email"
-                size="20" type="text" /><br> <label for="phone">Phone</label><input id="phone" maxlength="40"
-                name="phone" size="20" type="text" /><br> Subject:<select id="00N090000096kdC" name="00N090000096kdC"
-                title="Subject">
-                <option value="">--None--</option>
-                <option value="Subscribe to Premium">Subscribe to Premium</option>
-                <option value="Accessing Premium Webinars">Accessing Premium
-                    Webinars</option>
-                <option value="Cancel Premium Membership">Cancel Premium Membership
-                </option>
-                <option value="Unsubscribe">Unsubscribe</option>
-                <option value="Payment Query">Payment Query</option>
-                <option value="Log in Issue">Log in Issue</option>
-                <option value="Sending Feedback">Sending Feedback</option>
-                <option value="Signal Service Enquiry">Signal Service Enquiry
-                </option>
-                <option value="Other">Other</option>
-            </select><br> <label for="description">Description</label><textarea name="description"></textarea><br>
-            <label for="recordType">Case
-                Record Type</label><select id="recordType" name="recordType">
-                <option value="">--None--</option>
-                <option value="012090000005syc">Cases</option>
-                <option value="012090000005ujr">Cases B2B</option>
-                <option value="01209000000633E">Web-to-Case</option>
-            </select><br>
-            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a"></div><br>
+            <input type=hidden name="oid" value="00D09000006J5vH">
+            <input type=hidden name="retURL"
+                value="https://www.fxstreet.com/info/contact-us?section=products&status=sent">
+            <label for="first_name">First Name</label>
+            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+            <br>
+            <label for="last_name">Last Name</label>
+            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+            <br>
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" size="20" type="text" />
+            <br>
+            <label for="company">Company</label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" />
+            <br>
+            <p> Interested in:</p> FX News:<input id="00N09000006t9ji" name="00N09000006t9ji" type="checkbox"
+                value="1" />
+            <br> Calendar:<input id="00N09000006t9hm" name="00N09000006t9hm" type="checkbox" value="1" />
+            <br> Crypto News:<input id="00N09000006t9hw" name="00N09000006t9hw" type="checkbox" value="1" />
+            <br> Forecast Poll:<input id="00N09000006Rywo" name="00N09000006Rywo" type="checkbox" value="1" />
+            <br> Current Trading Positions:<input id="00N09000006Rywt" name="00N09000006Rywt" type="checkbox"
+                value="1" />
+            <br>
+            <input type="hidden" type="hidden" for="recordType" class="w2linput hidden" id="recordType"
+                name="recordType" value="012090000001VxU">
+            <br>
+            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a">
+
+            </div>
+            <br>
+            <input type="submit" name="submit">
+        </form>
+    </div>
+
+    <div class="fxs_section_item fxs_hideElements" id="fxs_section_advertisement">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name='captcha_settings'
+                value='{"keyname":"Invisible","fallback":"true","orgId":"00D09000006J5vH","ts":""}'>
+            <input type=hidden name="oid" value="00D09000006J5vH">
+            <input type=hidden name="retURL"
+                value="https://www.fxstreet.com/info/contact-us?section=advertisement&status=sent">
+            <label for="first_name">First Name</label>
+            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+            <br>
+            <label for="last_name">Last Name</label>
+            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+            <br>
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" size="20" type="text" />
+            <br>
+            <label for="company">Company</label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" />
+            <br>
+            <p> Interested in: </p> FXStreet:<input id="00N09000006t9iG" name="00N09000006t9iG" type="checkbox"
+                value="1" />
+            <br> Myfxbook:<input id="00N09000006t9iL" name="00N09000006t9iL" type="checkbox" value="1" />
+            <br> TradingView:<input id="00N09000006t9iQ" name="00N09000006t9iQ" type="checkbox" value="1" />
+            <br> ForexCrunch:<input id="00N09000006t9iV" name="00N09000006t9iV" type="checkbox" value="1" />
+            <br>
+            <input type="hidden" type="hidden" for="recordType" class="w2linput hidden" id="recordType"
+                name="recordType" value="012090000001VxU">
+            <br>
+            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a">
+
+            </div>
+            <br>
             <input type="submit" name="submit">
         </form>
     </div>
 
     <div class="fxs_section_item fxs_hideElements" id="fxs_section_contributors">
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-        <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") { var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value); elems["ts"] = JSON.stringify(new Date().getTime()); document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"> <input
-                type=hidden name='captcha_settings'
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name='captcha_settings'
                 value='{"keyname":"Invisible","fallback":"true","orgId":"00D09000006J5vH","ts":""}'>
-            <input type=hidden name="oid" value="00D09000006J5vH"> <input type=hidden name="retURL"
-                value="https://www.fxstreet.com/info/contact-us?section=support&status=sent">
-            <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
-                type="text" /><br> <label for="last_name">Last Name</label><input id="last_name" maxlength="80"
-                name="last_name" size="20" type="text" /><br> <label for="email">Email</label><input id="email"
-                maxlength="80" name="email" size="20" type="text" /><br> <label for="company">Company</label><input
-                id="company" maxlength="40" name="company" size="20" type="text" /><br> <label
-                for="title">Title</label><input id="title" maxlength="40" name="title" size="20" type="text" /><br>
-            Field of
-            Expertise:<textarea id="00N09000006SKjP" name="00N09000006SKjP" type="text" wrap="soft"></textarea><br>
-            <label for="description">Description</label><textarea name="description"></textarea><br> Sample
-            Submission:<textarea id="00N0900000965kq" name="00N0900000965kq" rows="3" type="text"
-                wrap="soft"></textarea><br> <input type="hidden" type="hidden" for="recordType" class="w2linput hidden"
-                id="recordType" name="recordTypeID" value="012090000001Yq3"><br>
-            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a"></div><br>
+            <input type=hidden name="oid" value="00D09000006J5vH">
+            <input type=hidden name="retURL"
+                value="https://www.fxstreet.com/info/contact-us?section=contributors&status=sent">
+            <label for="first_name">First Name</label>
+            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+            <br>
+            <label for="last_name">Last Name</label>
+            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+            <br>
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" size="20" type="text" />
+            <br>
+            <label for="company">Company</label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" />
+            <br>
+            <label for="title">Title</label>
+            <input id="title" maxlength="40" name="title" size="20" type="text" />
+            <br>
+            Field of Expertise:<textarea id="00N09000006SKjP" name="00N09000006SKjP" type="text" wrap="soft">
+      </textarea>
+            <br>
+            <label for="description">Description</label>
+            <textarea name="description">
+      </textarea>
+            <br> Sample Submission:<textarea id="00N0900000965kq" name="00N0900000965kq" rows="3" type="text"
+                wrap="soft">
+      </textarea>
+            <br>
+            <input type="hidden" type="hidden" for="recordType" class="w2linput hidden" id="recordType"
+                name="recordTypeID" value="012090000001Yq3">
+            <br>
+            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a">
+
+            </div>
+            <br>
             <input type="submit" name="submit">
         </form>
     </div>
-    <div class="fxs_section_item fxs_hideElements" id="fxs_section_products">
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-        <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") { var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value); elems["ts"] = JSON.stringify(new Date().getTime()); document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"> <input
-                type=hidden name='captcha_settings'
-                value='{"keyname":"Invisible","fallback":"true","orgId":"00D09000006J5vH","ts":""}'>
-            <input type=hidden name="oid" value="00D09000006J5vH"> <input type=hidden name="retURL"
-                value="https://www.fxstreet.com/info/contact-us?section=support&status=sent">
-            <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
-                type="text" /><br> <label for="last_name">Last Name</label><input id="last_name" maxlength="80"
-                name="last_name" size="20" type="text" /><br> <label for="email">Email</label><input id="email"
-                maxlength="80" name="email" size="20" type="text" /><br> <label for="company">Company</label><input
-                id="company" maxlength="40" name="company" size="20" type="text" /><br>
-            <p> Interested in:</p> FX News:<input id="00N09000006t9ji" name="00N09000006t9ji" type="checkbox"
-                value="1" /><br>
-            Calendar:<input id="00N09000006t9hm" name="00N09000006t9hm" type="checkbox" value="1" /><br> Crypto
-            News:<input id="00N09000006t9hw" name="00N09000006t9hw" type="checkbox" value="1" /><br> Forecast
-            Poll:<input id="00N09000006Rywo" name="00N09000006Rywo" type="checkbox" value="1" /><br> Current
-            Trading Positions:<input id="00N09000006Rywt" name="00N09000006Rywt" type="checkbox" value="1" /><br> <input
-                type="hidden" type="hidden" for="recordType" class="w2linput hidden" id="recordType" name="recordType"
-                value="012090000001VxU"><br>
-            <div class="g-recaptcha" data-sitekey="6Ledsn0aAAAAAHSYhC48Su2F8_5xBVj1Ddy6wU4a"></div><br>
-            <input type="submit" name="submit">
-        </form>
-    </div>
+
     <div id="fxs_thankyou" class="fxs_hideElements">
         <h2>Thank you</h2>
     </div>
-    <script> 
-        var getQueryVariable = function (variable) { 
-            var query = window.location.search.substring(1); 
-            var vars = query.split("&"); 
-            for (var i = 0; i < vars.length; i++) { 
-                var pair = vars[i].split("="); 
-                if (pair[0] == variable) { 
-                    return pair[1]; 
-                } 
+    <style>
+        .fxs_contact_selectors {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .fxs_contact_selector_item {
+            width: 100%;
+            border: 1px solid #A3A3A8;
+            margin-bottom: 1rem;
+        }
+
+        .fxs_contact_selector_item:hover {
+            border: 1px solid #E4871B;
+            text-decoration: none;
+        }
+
+
+        .fxs_contact_selector_item header {
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .fxs_contact_selector_item header .fas {
+            background-color: white;
+            border-radius: 50%;
+            padding: .5rem;
+            margin-right: 1rem;
+            width: 32px;
+            height: 32px;
+        }
+
+        .fxs_contact_selector_item main {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 140px;
+        }
+
+        .fxs_contact_selector_item main h4.fxs_headline_tiny {
+            color: #E4871B;
+        }
+
+        @media(min-width:450px) {
+            .fxs_contact_selector_item.fxs_contact_selector_item_full {
+                width: calc(100% / 2 - .5rem);
             }
-            return (false); 
+        }
+
+        @media(min-width:680px) {
+            .fxs_contact_selector_item {
+                width: calc(100% / 3 - .5rem);
+            }
+        }
+
+        @media(min-width:910px) {
+
+
+            .fxs_contact_selector_item.fxs_contact_selector_item_full {
+                width: calc(100% / 4 - .5rem);
+            }
+        }
+    </style>
+    <div class="fxs_contact_selectors">
+        <a target="_self" href="/index.html?section=support"
+            class="fxs_contact_selector_item_full fxs_contact_selector_item" id="fxs_contact_selector_support">
+            <header class="fxs_bg_light_4_clr fxs_txt_corp_clr ">
+                <i class="fas fa-headset fxs_txt_corp_clr "></i>
+                <span class="fxs_txt_size_small fxs_txt_corp_clr ">Need any help?</span>
+            </header>
+            <main>
+                <h3 class="fxs_headline_from_small_to_medium fxs_marginBase_bottom_big fxs_txt_corp_clr ">Get in touch
+                    with our user
+                    support team</h3>
+                <h4 class="fxs_headline_tiny">Get support</h4>
+            </main>
+        </a>
+        <a target="_self" href="/index.html?section=products"
+            class="fxs_contact_selector_item_full fxs_contact_selector_item" id="fxs_contact_selector_products">
+            <header class="fxs_bg_light_4_clr fxs_txt_corp_clr ">
+                <i class="fas fa-chart-line fxs_txt_corp_clr "></i>
+                <span class="fxs_txt_size_small fxs_txt_corp_clr ">Want to learn more about our products?</span>
+            </header>
+            <main>
+                <h3 class="fxs_headline_from_small_to_medium fxs_marginBase_bottom_big fxs_txt_corp_clr ">Get in touch
+                    with our sales team
+                </h3>
+                <h4 class="fxs_headline_tiny">Contact sales</h4>
+            </main>
+        </a>
+        <a target="_self" href="/index.html?section=advertisement"
+            class="fxs_contact_selector_item_full fxs_contact_selector_item" id="fxs_contact_selector_advertisement">
+            <header class="fxs_bg_light_4_clr fxs_txt_corp_clr ">
+                <i class="fas fa-bullhorn fxs_txt_corp_clr "></i>
+                <span class="fxs_txt_size_small fxs_txt_corp_clr ">Want to advertise?</span>
+            </header>
+            <main>
+                <h3 class="fxs_headline_from_small_to_medium fxs_marginBase_bottom_big fxs_txt_corp_clr ">Get in touch
+                    with our marketing
+                    team</h3>
+                <h4 class="fxs_headline_tiny">Contact marketing</h4>
+            </main>
+        </a>
+        <a target="_self" href="/index.html?section=contributors"
+            class="fxs_contact_selector_item_full fxs_contact_selector_item" id="fxs_contact_selector_contributors">
+            <header class="fxs_bg_light_4_clr fxs_txt_corp_clr ">
+                <i class="fas fa-user-edit fxs_txt_corp_clr "></i>
+                <span class="fxs_txt_size_small fxs_txt_corp_clr ">Want to contribute?</span>
+            </header>
+            <main>
+                <h3 class="fxs_headline_from_small_to_medium fxs_marginBase_bottom_big fxs_txt_corp_clr ">Get in touch
+                    with our editors
+                    team</h3>
+                <h4 class="fxs_headline_tiny">Contact editors</h4>
+            </main>
+        </a>
+    </div>
+    <script>
+        var getQueryVariable = function (variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return (false);
         };
-        
-        var section = getQueryVariable("section"); 
-        var status = getQueryVariable("status"); 
-        
-        if (section) { 
-            var selectorSelector = "#fxs_selector_" + section; 
-            var sectionSelector = "#fxs_section_" + section; 
-            var selectorElement = document.querySelector(selectorSelector); 
-            var sectionElement = document.querySelector(sectionSelector); 
-            selectorElement.classList.add('fxs_hideElements'); 
-            sectionElement.classList.remove('fxs_hideElements'); 
-        } 
-        
-        if (status==='sent') { 
-            var thankyou = document.querySelector('#fxs_thankyou'); 
-            thankyou.classList.remove('fxs_hideElements'); 
-            var sectionItems = document.querySelectorAll('.fxs_section_item'); 
-            var selectorItems = document.querySelectorAll('.fxs_selector_item'); 
-            
-            for (let index = 0; index < sectionItems.length; index++) { 
-                const element = sectionItems[index]; 
-                element.classList.add('fxs_hideElements'); 
-            } 
-            
-            for (let index = 0; index < selectorItems.length; index++) { 
-                const element = selectorItems[index]; 
-                element.classList.add('fxs_hideElements'); 
-            } 
+        var section = getQueryVariable("section");
+        var status = getQueryVariable("status");
+        var thankyou = document.querySelector('#fxs_thankyou');
+        var sectionItems = document.querySelectorAll('.fxs_section_item');
+        var selectorItems = document.querySelectorAll('.fxs_contact_selector_item');
+        var contactIntro = document.querySelector('#fxs_contact_intro');
+        if (section) {
+            var selectorSelector = "#fxs_contact_selector_" + section;
+            var sectionSelector = "#fxs_section_" + section;
+            var selectorElement = document.querySelector(selectorSelector);
+            var sectionElement = document.querySelector(sectionSelector);
+            selectorElement.classList.add('fxs_hideElements');
+            sectionElement.classList.remove('fxs_hideElements');
+            contactIntro.classList.add('fxs_hideElements');
+            for (let index = 0; index < selectorItems.length; index++) {
+                const element = selectorItems[index];
+                element.classList.remove('fxs_contact_selector_item_full');
+            }
+        }
+        if (status === 'sent') {
+            thankyou.classList.remove('fxs_hideElements');
+            for (let index = 0; index < sectionItems.length; index++) {
+                const element = sectionItems[index];
+                element.classList.add('fxs_hideElements');
+            }
+            for (let index = 0; index < selectorItems.length; index++) {
+                const element = selectorItems[index];
+                element.classList.add('fxs_hideElements');
+            }
         }
     </script>
-    <!--AQUÍ ACABA EL FORMULARIO DE SALESFORCE--> ​
+    <!--SALESFORCE--> ​
     <div>
         <link href="./index_files/fxs_non_critical.min.css" rel="stylesheet">
         <link media="(min-width: 320px)" href="./index_files/fxs_non_critical320.min.css" rel="stylesheet">
